@@ -11,9 +11,8 @@ bits 64
 global imgCvtGrayFloatToInt
 
 imgCvtGrayFloatToInt:
-
     MOV rax, rcx            ; rax = height
-    IMUL rax, rdx           ; rax = total number of pixels
+    IMUL rax, rdx           ; rdx = width, rax = total number of pixels
     
     CMP rax, 0
     JE L5_end               ; if no pixels, end
@@ -25,7 +24,7 @@ L1_start:
     JE L5_end               ; check if loop is done
 
     ; calculation and conversion
-    MOVSS xmm0, [r8]        ; load input         
+    MOVSS xmm0, [r8]        ; load float input        
     MULSS xmm0, xmm1        ; multiply pixel by 255
     CVTTSS2SI ebx, xmm0     ; convert float to int
 
@@ -36,7 +35,7 @@ L1_start:
     JG L4_255               ; if > 255, set to 255
 
 L2_store:                   
-    MOV byte [r9], bl       ; store values
+    MOV byte [r9], bl       ; store integer output
     ADD r8, 4                
     ADD r9, 1                
     DEC rax                  

@@ -1,3 +1,8 @@
+/*  S19B Heisel Janine Lazaro
+    S19B Justine Erika Wee
+    Program: Mapping Single Precision Float to uint8
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
