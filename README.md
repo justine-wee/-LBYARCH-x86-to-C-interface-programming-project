@@ -16,7 +16,7 @@ Each test was run **30 times** to compute average execution times.
 
 | Image Size | C Implementation (AVG sec) | ASM Implementation (AVG sec) |
 |------------|----------------------------|-----------------------------|
-| 10×10      | 0.000000                   | 0.00000                     |
+| 10×10      | 0.000000                   | 0.000000                    |
 | 100×100    | 0.000000                    | 0.000000                    |
 | 1000×1000  | 0.002767                     | 0.001067                      |
 
@@ -30,8 +30,9 @@ The C code also utilized type casting so that the output of the conversion will 
 ## 3. Program Output with Correctness Check
 
 ## 4. Conclusion
-The grayscale image conversion program is implemented using a C-to-x86 interface: C collects the input data and allocates memory, then calls the assembly function to perform the pixel calculations and conversion. The assembly function passes the results back to C, which displays the outputs and performs the correctness check. The timing results also show that the C implementation is slower than the assembly implementation, demonstrating the performance advantage of using SIMD instructions in assembly.”
+The grayscale image conversion program is implemented using a C-to-x86 interface: C collects the input data and allocates memory, then calls the assembly function to perform the pixel calculations and conversion. The assembly function passes the results back to C, which displays the outputs and performs the correctness check. The timing results also show that the C implementation is slower than the assembly implementation, demonstrating the performance advantage of using SIMD instructions in assembly.
 
 ## 5. References
 Guijarro, E. (2004, August 22). Type casting impact over execution performance in C#. Code Project. https://www.codeproject.com/articles/Type-casting-impact-over-execution-performance-in-#comments-section
+
 Parlante, N., Zelenski, J. (2008, April 7). The Ins and Outs of C Arrays. Stanford University. https://see.stanford.edu/materials/icsppcs107/07-Arrays-The-Full-Story.pdf
