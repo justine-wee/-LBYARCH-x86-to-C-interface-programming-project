@@ -25,7 +25,7 @@ L1_start:
 
     ; calculation and conversion
     MOVSS xmm0, [r8]        ; load float input        
-    MULSS xmm0, xmm1        ; multiply pixel by 255
+    MULSS xmm0, xmm1        ; i = f * 255
     CVTTSS2SI ebx, xmm0     ; convert float to int
 
     ; clamp values to stay in range
