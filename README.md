@@ -54,4 +54,5 @@ Parlante, N., Zelenski, J. (2008, April 7). The Ins and Outs of C Arrays. Stanfo
 
 ## 7. Members
 S19B Heisel Janine Lazaro
+
 S19B Justine Erika Wee
